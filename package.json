@@ -1,0 +1,175 @@
+{
+  "name": "codeai",
+  "displayName": "CodeAI",
+  "publisher": "CiticsData",
+  "icon": "images/logo.png",
+  "description": "coding assistant powered by citics",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mzbac/wizardCoder-vsc.git"
+  },
+  "version": "0.0.4",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "codeai-vsc",
+          "title": "CodeAI 问答助手",
+          "icon": "$(comment-discussion)"
+        },
+        {
+          "id": "codeai-sql",
+          "title": "CodeAI SQL解析",
+          "icon": "$(symbol-class)"
+        }
+      ]
+    },
+    "views": {
+      "codeai-vsc": [
+        {
+          "type": "webview",
+          "id": "codeai-vsc.view",
+          "name": "你的代码助手"
+        }],
+        "codeai-sql":[
+        {
+          "type": "webview",
+          "id": "codeai-sql.view",
+          "name": "SQL血缘解析"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "codeai-vsc.toggleActivate",
+        "title": "Toggle CodeAI activation"
+      },
+      {
+        "command": "codeai-vsc.chat",
+        "title": "Explain code with CodeAI"
+      },
+      {
+        "command": "codeai-vsc.sql",
+        "title": "Analyze SQL with CodeAI"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codeai-vsc.chat",
+          "when": "editorTextFocus",
+          "group": "codeai-vsc"
+        },
+        {
+          "command": "codeai-vsc.sql",
+          "when": "editorTextFocus",
+          "group": "codeai-vsc"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "codeai-vsc.toggleActivate",
+        "key": "shift+ctrl+'",
+        "mac": "shift+cmd+'"
+      }
+    ],
+    "configuration": {
+      "title": "CodeAI",
+      "properties": {
+        "codeai.chatModel": {
+          "type": "string",
+          "enum": [
+            "GPT-3.5-turbo",
+            "GPT-4",
+            "Qwen",
+            "Baichuan",
+            "ChatGLM2"
+          ],
+          "default": "ChatGLM2",
+          "description": "Model for the chat function of CodeAI",
+          "order": 0
+        },
+        "codeai.apiBase": {
+          "type": "string",
+          "default": "https://api.openai.com/v1",
+          "description": "[Optional] API endpoint for GPT models. Only needed for GPT models.",
+          "order": 2
+        },
+        "codeai.apiKey": {
+          "type": "string",
+          "default": null,
+          "description": "[Optional] API key for GPT models. Only needed for GPT models. ",
+          "order": 3
+        },
+        "codeai.temperature": {
+          "type": "number",
+          "default": 0.5,
+          "description": "Temperature to use for the chat model (between 0 (conservative) and 1 (creative))",
+          "order": 4
+        },
+        "codeai.maxTokens": {
+          "type": "number",
+          "default": 1024,
+          "description": "Maximum number of tokens inside response per request",
+          "order": 5
+        },
+        "codeai.sqlType": {
+          "type": "string",
+          "enum": [
+            "Oracle",
+            "GreenPlum",
+            "PostgreSQL",
+            "SqlServer"
+          ],
+          "default": "Oracle",
+          "description": "Type of SQL for analysis",
+          "order": 6
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.79.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vscode/test-electron": "^2.2.3",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "@types/qs": "^6.9.7",
+    "axios": "^1.4.0",
+    "node-fetch": "^3.3.1",
+    "openai": "^3.3.0",
+    "qs": "^6.11.2",
+    "showdown": "^2.1.0"
+  }
+}

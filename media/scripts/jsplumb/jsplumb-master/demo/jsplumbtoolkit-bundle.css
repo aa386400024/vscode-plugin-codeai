@@ -1,0 +1,2731 @@
+.jtk-logo-plumb {
+    fill: #6C7A88
+}
+
+.jtk-logo-js {
+    fill: #5BA9DD
+}
+
+.jtk-site-header {
+    display: flex;
+    align-items: center;
+    top: 0;
+    z-index: 101;
+    height: 4rem;
+    color: #3c565d;
+    padding: 0.25rem 1rem;
+    background-color: #f9f9f9
+}
+
+.jtk-site-header .jtk-site-header-inner {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.jtk-site-header .jtk-site-header-inner .jtk-logo {
+    width: 150px;
+    margin-top: 10px
+}
+
+.jtk-site-header .jtk-site-header-inner .jtk-site-header-links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem
+}
+
+.jtk-site-header .jtk-site-header-inner .jtk-site-header-links > a {
+    margin: 0 1rem;
+    text-transform: uppercase;
+    padding: .25rem;
+    transition: background-color 0.1s linear
+}
+
+.jtk-site-header .jtk-site-header-inner .jtk-site-header-links > a.current {
+    font-weight: bold;
+    border-bottom: 1px solid #94949a
+}
+
+.jtk-site-header .jtk-site-header-inner .jtk-site-header-links > a:not(.current):hover {
+    border-bottom: 1px solid #CCC
+}
+
+.jtk-site-header .jtk-site-header-inner .jtk-popup {
+    display: none;
+    font-size: 1.3rem;
+    margin-left: auto;
+    outline: none;
+    margin-right: 1rem
+}
+
+.jtk-site-header .jtk-site-header-inner .jtk-popup .jtk-popup-launch {
+    cursor: pointer
+}
+
+.jtk-site-header .jtk-site-header-inner .jtk-popup > .jtk-site-header-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    background-color: #eaece1;
+    align-items: normal;
+    top: 0;
+    margin: 0;
+    height: 100vh;
+    right: 0;
+    width: 90%;
+    max-width: 250px;
+    border-left: 1px solid #ccc;
+    box-shadow: 2px 0 10px #3c3737;
+    padding-top: 50px
+}
+
+.jtk-site-header .jtk-site-header-inner .jtk-popup > .jtk-site-header-links > a {
+    margin: 0 !important;
+    padding: 7px 13px !important;
+    color: #3c565d;
+    border-bottom: none
+}
+
+.jtk-site-header .jtk-site-header-inner .jtk-popup > .jtk-site-header-links > a:hover {
+    color: white;
+    background-color: #474e6b
+}
+
+[data-page='home'] .jtk-site-header {
+    background-color: #799d83
+}
+
+[data-page='home'] .jtk-site-header .jtk-site-header-links > a {
+    color: white
+}
+
+@media screen and (max-width: 850px) {
+    .jtk-site-header-inner > .jtk-site-header-links {
+        display: none !important
+    }
+
+    .jtk-popup {
+        display: block !important
+    }
+
+    .jtk-popup:focus-within {
+        width: auto
+    }
+
+    .jtk-popup:focus-within .jtk-popup-launch {
+        transform: rotate(90deg)
+    }
+
+    .jtk-popup:focus-within .jtk-site-header-links {
+        display: flex !important
+    }
+
+    .jtk-popup:focus-within .jtk-site-header-links > a {
+        border-radius: 0
+    }
+}
+
+.jtk-site-footer {
+    display: flex;
+    font-size: 0.9rem;
+    align-items: center;
+    padding: 2rem 1rem 1rem 1rem;
+    background-color: #f9f9f9
+}
+
+.jtk-site-footer .jtk-site-footer-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.jtk-site-footer .jtk-site-footer-inner .jtk-site-copyright {
+    display: flex;
+    flex-direction: column
+}
+
+.jtk-site-footer .jtk-site-footer-inner .jtk-site-copyright .jtk-site-copyright-text {
+    font-size: 0.8rem;
+    margin: 7px
+}
+
+.jtk-site-footer .jtk-site-footer-inner .jtk-site-links {
+    margin-left: auto
+}
+
+.jtk-site-footer .jtk-site-footer-inner .jtk-site-links a:hover {
+    text-decoration: underline;
+    color: #3f88b7
+}
+
+.jtk-license-links {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 200px
+}
+
+.jtk-license-links > a, .jtk-license-links a:visited {
+    color: #6fa76b
+}
+
+.jtk-privacy-policy h3 {
+    background-color: #f9f9f9;
+    padding: 5px;
+    color: #666
+}
+
+.jtk-site-contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem
+}
+
+.jtk-site-contact-form input[type='text'] {
+    height: 40px;
+    font-size: 1.1rem;
+    margin: 1rem;
+    width: 100%
+}
+
+.jtk-site-contact-form textarea {
+    font-size: 1.1rem;
+    margin: 1rem;
+    width: 100%
+}
+
+.jtk-site-contact-form .jtk-contact-reasons {
+    display: flex;
+    flex-direction: column
+}
+
+.jtk-site-contact-form .jtk-contact-reasons > label {
+    height: 30px
+}
+
+.jtk-site-contact-form .jtk-contact-reasons > label > input {
+    margin-right: 14px
+}
+
+.jtk-site-contact-form > div {
+    width: 100%
+}
+
+#key-container {
+    display: none
+}
+
+#submitResponse {
+    margin: 25px;
+    font-size: 19px
+}
+
+#submitResponse[data-ok='true'] {
+    color: #3b933b
+}
+
+#submitResponse[data-ok='false'] {
+    color: #b94c4c
+}
+
+.jtk-features-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 23px
+}
+
+.jtk-site-features table {
+    width: 100%;
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+    font-size: 0.9rem
+}
+
+.jtk-site-features table td, .jtk-site-features table th {
+    border: 1px solid #CCC;
+    padding: .5rem
+}
+
+.jtk-site-features table th {
+    text-align: center
+}
+
+.jtk-site-features table tr:nth-child(even) td {
+    background-color: #E9EBDD;
+    border-bottom: 1px solid #CFD0C9
+}
+
+.jtk-site-features table [supported] {
+    text-align: center
+}
+
+.jtk-site-features table [supported]::after {
+    content: "✓"
+}
+
+.jtk-features-discussion {
+    margin-top: 2.5rem
+}
+
+@media screen and (max-width: 850px) {
+    .jtk-features-container .jtk-site-features {
+        flex: 1
+    }
+
+    .jtk-features-container .jtk-features-discussion {
+        flex: 1;
+        margin: 0
+    }
+}
+
+.price-table {
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    padding: 1rem;
+    background-color: #fbfbfb;
+    margin: 1rem 0
+}
+
+.price-table .icon {
+    color: #a0b8b7;
+    font-size: 59px;
+    margin-left: 15px
+}
+
+.price-table .sub-title {
+    color: #696b60;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin-left: 2rem;
+    display: inline-block;
+    margin-top: 0.3rem
+}
+
+.price-table tr td .label {
+    width: 10rem
+}
+
+.price-table tr td .a-price {
+    width: 5.5rem;
+    display: flex
+}
+
+.price-table tr td .a-price .check-price {
+    flex: 0 0 100px
+}
+
+.price-table tr td .a-price .price {
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding-left: 10px;
+    text-align: right;
+    white-space: nowrap
+}
+
+.icon-license:before, .icon-licenseOEM:before {
+    content: "\e604"
+}
+
+.icon-support:before {
+    content: "\e606"
+}
+
+.icon-upgrades:before, .icon-renewal:before, .icon-renewalOEM:before {
+    content: "\ea10"
+}
+
+.package-error {
+    font-size: 1.2rem;
+    color: #ff6227;
+    display: none;
+    margin-bottom: 9px
+}
+
+#submitContainer {
+    display: flex;
+    align-items: center
+}
+
+#submitContainer button {
+    margin-left: auto;
+    height: 47px
+}
+
+[data-id='license-key'] {
+    display: none;
+    margin-right: 2rem;
+    flex-grow: 1
+}
+
+[data-id='license-key'] input {
+    height: 40px;
+    width: 100%
+}
+
+.invoice-details table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #CFD0C9
+}
+
+.invoice-details table th, .invoice-details table td {
+    padding: 10px;
+    text-align: center
+}
+
+.invoice-details table td.item {
+    text-align: right
+}
+
+.invoice-details td {
+    border-left: 1px solid #CFD0C9
+}
+
+.invoice-details tr:nth-child(even) td {
+    background-color: #E9EBDD;
+    border-bottom: 1px solid #CFD0C9
+}
+
+.colTotal {
+    font-weight: bold;
+    text-align: right !important
+}
+
+.colPrice {
+    white-space: nowrap
+}
+
+.payment-form-inner {
+    overflow: hidden;
+    -webkit-transition: height 0.5s linear;
+    -moz-transition: height 0.5s linear;
+    -ms-transition: height 0.5s linear;
+    -o-transition: height 0.5s linear;
+    transition: height 0.5s linear
+}
+
+.jtk-payment-form label {
+    display: block;
+    padding-bottom: 21px
+}
+
+.jtk-payment-form label span {
+    font-size: 12px;
+    color: cadetblue
+}
+
+#jsp-card-number {
+    border: 1px solid #CCC;
+    padding: 10px
+}
+
+.payment-form-buttons {
+    display: flex;
+    align-items: center
+}
+
+#payment-execute {
+    display: flex;
+    margin-bottom: 50px
+}
+
+.payment-order-details {
+    flex: 0 0 45%
+}
+
+.payment-cc-form {
+    margin-left: 15px;
+    flex-grow: 1
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column
+}
+
+.btn-cancel-payment {
+    margin-left: 14px
+}
+
+.payment-form-message {
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #f3f3f3;
+    color: #444
+}
+
+.payment-form-message[data-ok='true'] {
+    color: green
+}
+
+.payment-form-message[data-ok='false'] {
+    color: red
+}
+
+.payment-selector {
+    border: 1px solid #CFD0C9;
+    padding: 16px
+}
+
+.payment-type {
+    background-color: #E9EBDD;
+    padding: 16px;
+    margin: 0 0 15px 0
+}
+
+[payment-type='invoice'] .payment-card {
+    display: none
+}
+
+[payment-type='invoice'] .payment-invoice {
+    display: block
+}
+
+[payment-type='card'] .payment-invoice {
+    display: none
+}
+
+[payment-type='card'] .payment-card {
+    display: block
+}
+
+.payment-bank-details ul {
+    margin: 0;
+    padding: 0
+}
+
+.payment-bank-details ul li {
+    list-style-type: none;
+    margin: 8px 0;
+    font-size: 15px
+}
+
+.payment-bank-details ul li strong {
+    margin-right: 15px
+}
+
+@media screen and (max-width: 850px) {
+    #payment-execute {
+        flex-wrap: wrap
+    }
+
+    .payment-order-details {
+        flex: 0 1 100%
+    }
+
+    .payment-cc-form {
+        margin-left: 0;
+        flex: 0 1 100%
+    }
+}
+
+.repeated-price {
+    flex: 0 0 100px;
+    display: flex
+}
+
+.repeated-price input[type='text'] {
+    width: 20px;
+    text-align: center
+}
+
+.jtk-flash {
+    margin: 30px 0;
+    text-align: center
+}
+
+.jtk-flash-error {
+    color: #ff6227
+}
+
+#frmLicenseeDownload button:after {
+    content: attr(data-check)
+}
+
+#frmLicenseeDownload .jtk-msg {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    display: none;
+    text-align: right
+}
+
+#frmLicenseeDownload > div [name='key'] {
+    flex-grow: 1;
+    margin-right: 1rem
+}
+
+#frmLicenseeDownload > div button {
+    margin-left: auto;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    flex-shrink: 0
+}
+
+#frmLicenseeDownload[data-check-complete] .jtk-msg {
+    display: block
+}
+
+#frmLicenseeDownload[data-check-error='false'] button {
+    background-color: #6fa76b
+}
+
+#frmLicenseeDownload[data-check-error='false'] button:after {
+    content: attr(data-download)
+}
+
+#frmLicenseeDownload[data-check-error='true'] .jtk-msg {
+    color: #ff6227
+}
+
+#frmEvaluationDownload button {
+    margin-left: auto;
+    font-size: 0.95rem;
+    flex-shrink: 0
+}
+
+#frmEvaluationDownload [name='key'] {
+    flex-grow: 1;
+    margin-right: 1rem
+}
+
+.jtk-demonstration-container {
+    display: flex;
+    width: 100%
+}
+
+.jtk-demonstration-container .jtk-demo-main {
+    margin-top: 0 !important;
+    flex-grow: 1;
+    height: auto;
+    position: relative
+}
+
+.jtk-demonstration-container .jtk-github-link {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0.8;
+    display: flex;
+    align-items: center
+}
+
+.jtk-demonstration-container .jtk-github-link:hover {
+    opacity: 1
+}
+
+.jtk-demonstration-container .jtk-github-link img {
+    margin-right: 10px
+}
+
+.jtk-site-demonstrations {
+    flex: 0 0 250px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px
+}
+
+.jtk-site-demonstrations a {
+    padding: 5px;
+    border-radius: 3px
+}
+
+.jtk-site-demonstrations a[data-current='true'] {
+    color: #474e6b;
+    font-weight: bold
+}
+
+.jtk-site-demonstrations a:not([data-current]):hover {
+    background-color: #474e6b;
+    color: white
+}
+
+.jtk-site-demonstrations-dropdown {
+    display: none;
+    flex: 1 0 35px;
+    margin: 25px;
+    height: 35px
+}
+
+[data-page='demonstrations'] .jtk-site-header-inner {
+    max-width: 100%;
+    max-width: unset
+}
+
+[data-page='demonstrations'] .jtk-site-footer-inner {
+    max-width: 100%;
+    max-width: unset
+}
+
+@media screen and (max-width: 1050px) {
+    .jtk-site-demonstrations-dropdown {
+        display: block
+    }
+
+    .jtk-site-demonstrations {
+        display: none
+    }
+
+    .jtk-demonstration-container {
+        flex-direction: column
+    }
+
+    .jtk-demonstration-container .jtk-demo-main {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid #ccc
+    }
+
+    .jtk-demo-canvas {
+        flex-basis: 600px;
+        height: 600px
+    }
+
+    .node-palette {
+        flex-direction: row !important;
+        justify-content: center;
+        border-bottom: 1px solid #CCC;
+        padding-bottom: 18px
+    }
+}
+
+.jtk-home {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 50px auto;
+    align-items: center
+}
+
+.jtk-home-words {
+    flex: 0 0 50%;
+    font-size: 17px
+}
+
+.jtk-home-diagram {
+    border-radius: 4px;
+    margin-left: 3%;
+    height: 500px;
+    margin-bottom: 50px;
+    position: relative
+}
+
+.jtk-home-diagram [current-example] {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: -58px;
+    right: 0;
+    text-align: center;
+    color: black
+}
+
+.jtk-home-diagram > div {
+    width: 100%;
+    height: 100%
+}
+
+.jtk-page-slice {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0
+}
+
+.jtk-page-slice-margin-bottom {
+    margin-bottom: 1.5rem
+}
+
+.jtk-page-slice-margin-top {
+    margin-top: 1.5rem
+}
+
+.jtk-page-slice-margin {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem
+}
+
+.jtk-hero-slice {
+    flex-shrink: 0
+}
+
+.bullet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem
+}
+
+.bullet > div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem
+}
+
+.bullet > div > div {
+    padding: 0.4rem
+}
+
+.bullet svg {
+    width: 5rem;
+    fill: currentColor;
+    flex-shrink: 0;
+    margin: 1.5rem
+}
+
+.jtk-home-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0
+}
+
+.jtk-home-actions a {
+    width: 8rem;
+    color: white !important;
+    margin: 0 1rem
+}
+
+.jtk-home-data-model {
+    display: flex
+}
+
+.jtk-home-data-model img {
+    width: 450px
+}
+
+.jtk-home-data-model pre {
+    color: #444;
+    border-radius: 0.4rem;
+    font-size: 0.95rem
+}
+
+.jtk-home-data-model .key {
+    color: red
+}
+
+.jtk-home-data-model .string {
+    color: green
+}
+
+.cell-2 {
+    flex-basis: 45%
+}
+
+@media all and (max-width: 850px) {
+    .cell-2 {
+        flex-basis: 100%
+    }
+}
+
+[data-page='home'] .jtk-logo-plumb {
+    fill: white
+}
+
+[data-page='home'] .jtk-logo-js {
+    fill: white
+}
+
+[data-page='home'] .jtk-node {
+    border: 3px solid #DDD;
+    width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.14);
+    opacity: 0.8;
+    border-radius: 4px
+}
+
+[data-page='home'] .jtk-surface {
+    overflow: hidden !important;
+    position: relative;
+    cursor: move;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    touch-action: none
+}
+
+[data-page='home'] .jtk-surface-canvas {
+    position: absolute !important
+}
+
+[data-page='home'] .jtk-surface-pan {
+    display: none
+}
+
+[data-page='home'] .jtk-animate-source, [data-page='home'] .jtk-animate-target {
+    border: 3px solid orangered;
+    background-color: #fff0f023
+}
+
+[data-page='home'] .jtk-animate-edge-traversable path {
+    stroke: orangered
+}
+
+[data-page='home'] .jtk-overlay {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 189.5px;
+    top: 115.5px;
+    background-color: #6d966d;
+    padding: 3px;
+    border-radius: 3px;
+    color: #dadeda;
+    text-transform: lowercase;
+    white-space: nowrap
+}
+
+[data-page='home'] .jtk-sequence-node {
+    left: 50px;
+    top: 50px;
+    white-space: nowrap;
+    height: 300px;
+    display: block;
+    border: none;
+    background: none
+}
+
+[data-page='home'] .jtk-sequence-node .jtk-sequence-bar {
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    height: 100%;
+    background-color: #CCC;
+    width: 2px
+}
+
+[data-page='home'] .flowchart-object {
+    border: none;
+    background: none
+}
+
+[data-page='home'] .jtk-node svg rect, [data-page='home'] .jtk-node svg path {
+    fill: rgba(255, 255, 255, 0.4)
+}
+
+.code {
+    font-family: "Source Code Pro", monospace;
+    white-space: pre-wrap;
+    font-size: 13px;
+    background: #f7f7ff;
+    padding: 10px;
+    border-radius: 3px;
+    color: #222;
+    line-height: 20px;
+    margin: 1rem 0
+}
+
+code {
+    color: #444;
+    background-color: #e8f1ef;
+    padding: 2px;
+    border-radius: 2px
+}
+
+.admin-container input[type="text"] {
+    width: 304px;
+    margin-bottom: 10px;
+    height: 40px
+}
+
+.admin-container textarea {
+    width: 304px;
+    height: 250px
+}
+
+.admin-container select {
+    width: 304px;
+    margin-bottom: 10px;
+    height: 40px;
+    outline: none;
+    background: transparent;
+    border: 1px solid #ccc
+}
+
+.purchase-history-table {
+    border: 1px solid #ccc;
+    border-collapse: collapse
+}
+
+.purchase-history-table td, .purchase-history-table th {
+    border: 1px solid #ccc
+}
+
+@font-face {
+    font-family: 'ico-jsplumb';
+    src: url("/assets/fonts/ico-jsplumb.eot?-oqkwhs");
+    src: url("/assets/fonts/ico-jsplumb.eot?#iefix-oqkwhs") format("embedded-opentype"), url("/assets/fonts/ico-jsplumb.woff?-oqkwhs") format("woff"), url("/assets/fonts/ico-jsplumb.ttf?-oqkwhs") format("truetype"), url("/assets/fonts/ico-jsplumb.svg?-oqkwhs#ico-jsplumb") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'ico-jsplumb';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px
+}
+
+body {
+    font-family: Roboto, sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    color: #646464;
+    box-sizing: border-box
+}
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none
+}
+
+a.callout {
+    color: #3f88b7;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+pre {
+    background-color: #f9f9f9;
+    padding: 13px;
+    white-space: pre-wrap
+}
+
+button {
+    cursor: pointer
+}
+
+.jtk-body-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-grow: 1;
+    width: 90%
+}
+
+.jtk-margin-top {
+    margin-top: 1rem
+}
+
+.jtk-margin-left {
+    margin-left: 1rem
+}
+
+.jtk-demo-inner {
+    max-height: 100%;
+    max-height: unset;
+    height: auto
+}
+
+.jtk-site-text {
+    height: 30px;
+    padding: 5px;
+    text-indent: 2px;
+    width: 99%
+}
+
+.jtk-site-narrow {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.jtk-site-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh
+}
+
+.text-title {
+    color: #444;
+    text-transform: uppercase;
+    font-size: 155%;
+    margin: 1em
+}
+
+.text-sub-title {
+    color: #555;
+    text-transform: uppercase;
+    font-size: 135%;
+    margin: 1em
+}
+
+.centered-text {
+    width: 80%;
+    max-width: 1050px;
+    font-size: 1.2rem
+}
+
+.jtk-site-container[data-page='purchase'], .jtk-site-container[data-page='features'] {
+    height: auto
+}
+
+.dark {
+    background-color: #799d83;
+    color: #f5f5f5
+}
+
+.tan {
+    background-color: #eaece1
+}
+
+.light {
+    background-color: #20978c
+}
+
+.community-slice {
+    color: #464040
+}
+
+[data-page='demonstrations'], [data-page='blog'] {
+    max-width: unset
+}
+
+[data-page='demonstrations'] .jtk-body-content, [data-page='blog'] .jtk-body-content {
+    overflow: auto;
+    max-width: 100%;
+    max-width: unset;
+    width: 100%
+}
+
+[data-page='blog'] .jtk-body-content {
+    overflow: visible
+}
+
+.jtk-site-heading {
+    padding: 0 0 0.5rem 0;
+    border-bottom: 1px solid #94949a
+}
+
+input[type='text'], input[type='email'] {
+    outline: none;
+    background: transparent;
+    border: 1px solid #ccc
+}
+
+textarea {
+    border: 1px solid #ccc;
+    text-indent: 3px;
+    outline: none
+}
+
+.jtk-site-button {
+    background-color: #474e6b;
+    border-radius: 3px;
+    padding: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem
+}
+
+.jtk-site-button:hover {
+    color: #f2f2f2;
+    background-color: #51597a
+}
+
+.jtk-site-button:active {
+    color: #f2f2f2;
+    background-color: #33384c
+}
+
+.jtk-site-action-button {
+    background-color: #6fa76b;
+    border-radius: 3px;
+    padding: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem
+}
+
+.jtk-site-action-button:hover {
+    color: #f2f2f2;
+    background-color: #7fb17b
+}
+
+.jtk-site-action-button:active {
+    color: #f2f2f2;
+    background-color: #578c53
+}
+
+.jtk-site-purchase-button {
+    background-color: #3e7c96;
+    border-radius: 3px;
+    padding: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem
+}
+
+.jtk-site-purchase-button:hover {
+    color: #f2f2f2;
+    background-color: #458ba8
+}
+
+.jtk-site-purchase-button:active {
+    color: #f2f2f2;
+    background-color: #2f5e72
+}
+
+.jtk-clear-button {
+    outline: none;
+    border: none
+}
+
+@media all and (max-width: 800px) {
+    html {
+        font-size: 12px
+    }
+
+    .jtk-body-content {
+        width: 90%;
+        margin: 0 auto
+    }
+}
+
+[data-page='home'], [data-page='community'] {
+    width: 100vw;
+    max-width: 100%;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    height: unset
+}
+
+[data-page='home'] .jtk-body-content, [data-page='community'] .jtk-body-content {
+    flex-direction: column;
+    max-width: 100%;
+    max-width: unset;
+    width: 100%
+}
+
+[data-page='community'] .jtk-home {
+    max-width: 1400px;
+    flex-wrap: wrap-reverse
+}
+
+[data-page='community'] .jtk-home .cell-2 {
+    align-self: flex-end
+}
+
+[data-page='community'] .jtk-home .jtk-home-diagram {
+    margin-left: 0;
+    margin-bottom: 0
+}
+
+[data-page~='error'] {
+    background-size: cover
+}
+
+[data-page~='error'] .jtk-body-content span {
+    margin: 16px;
+    background-color: #ffffffcc !important;
+    padding: 24px;
+    color: #40382a;
+    border-radius: 3px;
+    position: fixed;
+    left: 10px;
+    top: 58px;
+    width: 250px;
+    font-size: 16px
+}
+
+[data-page~='error'] .jtk-site-header, [data-page~='error'] .jtk-site-footer {
+    background-color: #ffffffe0 !important
+}
+
+[data-page~='london'] {
+    background-image: url("/assets/images/autumn-in-london.jpg")
+}
+
+[data-page~='prague'] {
+    background-image: url("/assets/images/střelecký-ostrov.jpg")
+}
+
+[data-page~='tennis'] {
+    background-image: url("/assets/images/leyton-tennis-court.jpg")
+}
+
+[data-page~='night'] {
+    background-image: url("/assets/images/london-at-night.jpg")
+}
+
+.fa-github {
+    position: fixed;
+    z-index: 130;
+    right: 25px;
+    bottom: 25px;
+    display:block;
+    width:80px;
+    height:80px;
+    background-image: url('./GitHub-Mark-120px-plus.png');
+    background-size:contain;
+}
+/* 
+    Default styles for jsPlumb Toolkit
+
+    Copyright 2020 https://jsplumbtoolkit.com
+*/
+
+/* --------------------------------------------------------------------------------------------- */
+/* --- SURFACE WIDGET -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+/*
+    Assigned to SVG elements for edges. This style allows overlays to paint outside the bounds, and
+    for arbitrary stroke widths for connectors.
+ */
+.jtk-connector {
+    overflow:visible;
+}
+
+/*
+    Assigned to every Node managed by an instance of the Toolkit. They are required to be positioned absolute, to
+    enable dragging to work properly.
+*/
+.jtk-node {
+    position: absolute;
+}
+
+/*
+    Assigned to every Group managed by an instance of the Toolkit. They are required to be positioned absolute, to
+    enable dragging to work properly. We set overflow:visible on Group elements too, as a drag outside of the bounds
+    is automatically reverted anyway, and without overflow:visible you cannot drag a node to some other element. You can
+    also drag a node out of the element's viewport and if you drop it you can never get it back.
+*/
+.jtk-group {
+    position: absolute;
+    overflow: visible;
+}
+
+/*
+    Default behaviour for children of a collapsed group - hide them.
+ */
+[data-jtk-group].jtk-group-collapsed [data-jtk-managed] {
+    display:none;
+}
+
+/*
+
+    This is the attribute used to mark which part of a Group DOM element should contain the child Nodes. We mark it
+    as having `position:relative` so that the absolute positioned Nodes are drawn correctly.
+*/
+[data-jtk-group-content] {
+    position:relative;
+}
+
+/*
+    This style was created in response to this Chrome bug:
+    http://stackoverflow.com/questions/13758215/artifacts-when-css-scaled-in-chrome
+
+    Basically it's about how sometimes there can be artefacts left on screen when the user drags an element. It seems
+    the issue has been fixed in more recent versions of Chrome, but the style is left here in case you come across
+    the problem.
+*/
+.jtk-node.jtk-drag {
+    /*-webkit-backface-visibility: hidden;*/
+}
+
+/*
+    Suppresses the pointer events on an element that was created by Katavorio in response to a drag in which the element
+    should first be cloned. Having this clone ignore pointer events means there is less chance that any other
+    mouse activity (such as click) on the original element will not be consumed by katavorio.
+ */
+.katavorio-clone-drag {
+    pointer-events:none;
+}
+
+/*
+    Assigned to an element that is the `Container` in a `render` call.
+    Elements that are acting as Surface widgets should have overflow:hidden set to prevent libs from
+    scrolling them during drag (we don't want scrollbars; we have an infinite canvas). Position is set to
+    `relative` as this is the parent for nodes, which are positioned absolute (and for absolute positioning
+    to work, you need to ensure the parent node has `position:relative`). This style also sets some default
+    values for the cursor - using a `grab` cursor where supported.
+*/
+.jtk-surface {
+    overflow: hidden !important;
+    position: relative;
+    cursor: move;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+
+    /*
+        For IE10+. As discussed on this page:
+
+        https://msdn.microsoft.com/en-us/library/ie/jj583807(v=vs.85).aspx
+
+        Microsoft have very helpfully implemented default behaviours for a bunch of touch events and
+        then consumed the events so you don't have to be bothered by them. They've "done a lot of research"
+        about this stuff and put together a really great default experience for everyone in the entire world.
+    */
+    touch-action:none;
+
+    /*
+        Another Chrome issue that appears to have been fixed in later versions
+        http://stackoverflow.com/questions/15464055/css-transition-effect-makes-image-blurry-moves-image-1px-in-chrome
+    */
+    /*
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    */
+}
+
+/**
+* Assigned to a Surface element when direct rendering is switched on - no pan or zoom, the underlying canvas scaled to fit its contents at zoom:1.
+ */
+.jtk-surface-direct-render {
+    overflow:hidden !important;
+}
+
+/*
+    Assigned to the surface when it is being panned. The default is to change the cursor (in browsers that support
+    a `grabbing` cursor), and to disable text selection.
+*/
+.jtk-surface-panning {
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*
+    The work area in a surface renderer.
+*/
+.jtk-surface-canvas {
+    overflow: visible !important;
+}
+
+/*
+    For IE10+. Discussed above in the .jtk-surface styles. This one is specific to elements that are configured
+    to be droppable on a Surface via its `registerDroppableNodes` method.
+*/
+.jtk-surface-droppable-node {
+    touch-action:none;
+}
+
+/*
+    Assigned to a Surface widget when panning is disabled (and therefore the app is relying on scrollbars when the content overflows).
+*/
+.jtk-surface-nopan {
+    overflow: scroll !important;
+    cursor:default;
+}
+
+/*
+Assigned to tile images in a tiled background
+*/
+.jtk-surface-tile {
+    border:none;
+    outline:none;
+    margin:0;
+    -webkit-transition: opacity .3s ease .15s;
+    -moz-transition: opacity .3s ease .15s;
+    -o-transition: opacity .3s ease .15s;
+    -ms-transition: opacity .3s ease .15s;
+    transition: opacity .3s ease .15s;
+}
+
+/*
+    Assigned to the element used for node select with the mouse ("lasso").
+*/
+.jtk-lasso {
+    border: 2px solid rgb(49, 119, 184);
+    background-color: WhiteSmoke;
+    opacity: 0.5;
+    display: none;
+    z-index: 20000;
+    position: absolute;
+}
+
+/*
+    This class is added to the document body on lasso drag start and removed at the end of lasso dragging. Its purpose
+    is to switch off text selection on all elements while the user is dragging the lasso.
+*/
+.jtk-lasso-select-defeat * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/**
+    Added to the lasso mask when it is operating in 'inverted' mode, ie. the excluded parts of the UI are covered, rather
+    than the normal mode in which the selected parts of the UI are covered.
+*/
+.jtk-lasso-mask {
+    position:fixed;
+    z-index:20000;
+    display:none;
+    opacity:0.5;
+    background-color: #07234E;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+/*
+    Assigned to some element that has been selected (either via lasso or programmatically).
+*/
+.jtk-surface-selected-element {
+    border: 2px dotted #c7726c !important;
+}
+
+/*
+    Assigned to all pan buttons in a surface widget.
+*/
+.jtk-surface-pan {
+    background-color: Azure;
+    opacity: 0.4;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+    -webkit-transition: background-color 0.15s ease-in;
+    -moz-transition: background-color 0.15s ease-in;
+    -o-transition: background-color 0.15s ease-in;
+    transition: background-color 0.15s ease-in;
+}
+
+/*
+    Specific styles for the top and bottom pan buttons.
+    Top/bottom are 100% width and 20px high by default
+*/
+.jtk-surface-pan-top, .jtk-surface-pan-bottom {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+    Hover styles for all pan buttons.
+    On hover, change color, background color, font weight and opacity.
+*/
+.jtk-surface-pan-top:hover, .jtk-surface-pan-bottom:hover, .jtk-surface-pan-left:hover, .jtk-surface-pan-right:hover {
+    opacity: 0.6;
+    background-color: rgb(49, 119, 184);
+    color: white;
+    font-weight: bold;
+}
+
+/*
+    Specific styles for the left and right pan buttons.
+    Left/right pan buttons are 100% height and 20px wide
+*/
+.jtk-surface-pan-left, .jtk-surface-pan-right {
+    width: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+/*
+    Assigned to a pan button when the user is pressing it.
+*/
+.jtk-surface-pan-active, .jtk-surface-pan-active:hover {
+    background-color: #f76258;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* --- MINIVIEW WIDGET ------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+/*
+    Assigned to an element that is acting as a Miniview.
+    As with Surface, Miniview elements should have overflow:hidden set to prevent
+    libs from scrolling them during drag. This style also provides a default width/height for a miniview,
+    which you may wish to override.
+*/
+.jtk-miniview {
+    overflow: hidden !important;
+    width: 125px;
+    height: 125px;
+    position: relative;
+    background-color: transparent;
+    border: 2px solid #d4d8dc;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+/* 
+    Assigned to the element that shows the size of the related viewport in a Miniview widget, and which can be dragged to
+    move the surface.
+*/
+.jtk-miniview-panner {
+    border: 5px dotted WhiteSmoke;
+    opacity: 0.4;
+    background-color: rgb(79, 111, 126);
+    cursor: move;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+/*
+    Assigned to the miniview's panner when it is being dragged.
+*/
+.jtk-miniview-panning {
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/*
+    Added to all elements displayed in a miniview.
+*/
+.jtk-miniview-element {
+    background-color: rgb(96, 122, 134);
+    position: absolute;
+}
+
+/*
+    Added to Group elements displayed in a miniview
+*/
+.jtk-miniview-group-element {
+    background: transparent;
+    border: 3px solid black;
+}
+
+/*
+    Assigned to the collapse/expand miniview button
+*/
+.jtk-miniview-collapse {
+    color: whiteSmoke;
+    position: absolute;
+    font-size: 18px;
+    top: -1px;
+    right: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*
+    The '-' symbol when the miniview is expanded
+*/
+.jtk-miniview-collapse:before {
+    content: "\2012";
+}
+
+/*
+    Assigned to the miniview element when it is collapsed.
+*/
+.jtk-miniview-collapsed {
+    background-color: #449ea6;
+    border-radius: 4px;
+    height: 22px;
+    margin-right: 0;
+    padding: 4px;
+    width: 21px;
+}
+
+/*
+    Hide all children of the miniview (except the expand button) when it is collapsed so you don't see anything
+    poking through under the + icon.
+*/
+.jtk-miniview-collapsed .jtk-miniview-element, .jtk-miniview-collapsed .jtk-miniview-panner {
+    visibility: hidden;
+}
+
+/*
+    The '+' symbol when the miniview is collapsed.
+*/
+.jtk-miniview-collapsed .jtk-miniview-collapse:before {
+    content: "+";
+}
+
+/*
+    Hover state for the collapse/expand icon.
+*/
+.jtk-miniview-collapse:hover {
+    color: #E4F013;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* --- DRAWING TOOLS -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+
+/*
+    Assigned to the element that is drawn around some other element when a drawing operation is taking place.
+*/
+.jtk-draw-skeleton {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    outline: 2px solid #84acb3;
+    opacity: 0.8;
+}
+
+/*
+    Assigned to every handle (top left, top right, bottom left, bottom right, center) in a draw skeleton.
+*/
+.jtk-draw-handle {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #84acb3;
+}
+
+/*
+    Assigned to the top left handle in a draw skeleton
+*/
+.jtk-draw-handle-tl {
+    left: 0;
+    top: 0;
+    cursor: nw-resize;
+}
+
+/*
+    Assigned to the top right handle in a draw skeleton
+*/
+.jtk-draw-handle-tr {
+    right: 0;
+    top: 0;
+    cursor: ne-resize;
+}
+
+/*
+    Assigned to the bottom left handle in a draw skeleton
+*/
+.jtk-draw-handle-bl {
+    left: 0;
+    bottom: 0;
+    cursor: sw-resize;
+}
+
+/*
+    Assigned to the bottom right handle in a draw skeleton
+*/
+.jtk-draw-handle-br {
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+}
+
+/*
+    Assigned to the center handle in a draw skeleton (the handle by which the element may be dragged). This is
+    not visible by defaut; enable if you need it.
+*/
+.jtk-draw-drag {
+    display:none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #84acb3;
+    cursor: move;
+}
+
+/*
+    This class is added to the document body on drag resize start and removed at the end of resizing. Its purpose
+    is to switch off text selection on all elements while the user is resizing an element.
+*/
+.jtk-drag-select-defeat * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+/* --- page structure --------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.jtk-demo-main {
+    display:flex;
+    height:100vh;
+}
+
+.jtk-demo-inner {
+    display:flex;
+}
+
+.jtk-demo-main .description {
+    font-size: 13px;
+    padding: 13px;
+}
+
+.jtk-demo-main .description ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.jtk-demo-main .description li {
+    list-style-type: disc !important;
+    margin:3px 0;
+}
+
+.jtk-demo-canvas {
+    background-color:white;
+    display: flex;
+    flex-grow:1;
+    position:relative;
+    overflow:hidden !important;
+}
+
+.jtk-demo-rhs {
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    background-color: #f9f9f9;
+    flex: 0 0 250px;
+    padding:20px 5px 0 5px;
+}
+
+.canvas-wide {
+    margin-left:0;
+}
+
+.miniview {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 100;
+}
+
+
+.jtk-demo-dataset {
+    overflow: auto;
+    font-size: 12px;
+    font-family: Courier, monospace;
+}
+
+.jtk-demo-dataset pre {
+    white-space: pre-wrap;
+}
+
+.demo-title {
+    float:left;
+    font-size:18px;
+}
+
+.controls {
+    top: 25px;
+    color: #FFF;
+    margin-right: 10px;
+    position: absolute;
+    left: 25px;
+    z-index: 1;
+    display:flex;
+    font-size:14px;
+}
+
+.controls i {
+    background-color: #5184a0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 4px;
+    border: 1px solid white;
+    font-size: 22px;
+    font-style: normal;
+    width: 24px;
+    height: 24px;
+}
+
+.controls i:not(.selected-mode):hover {
+    background-color: white;
+    color:#5184a0;
+    border: 1px solid #5184a0;
+}
+
+.controls i:not(.selected-mode):active {
+    color: white;
+    background-color:#1d9ea0;
+    border: 1px solid white;
+}
+
+[undo], [redo] { background-color:darkgray !important; }
+[undo]:hover, [redo]:hover { background-color:darkgray !important; color:white !important;border:1px solid white !important;}
+[can-undo='true'] [undo], [can-redo='true'] [redo] { background-color: #3E7E9C  !important; }
+[can-undo='true'] [undo]:hover, [can-redo='true'] [redo]:hover {
+    background-color: white  !important;
+    color:#5184a0 !important;
+    border: 1px solid #5184a0 !important;
+}
+
+/* ------------------------ node palette -------------------- */
+
+.node-palette {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jtk-demo-sidebar {
+    margin:0;
+    padding:10px 0;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+
+}
+
+.sidebar-item {
+    background-color: #CCC;
+    border-radius: 11px;
+    color: #585858;
+    cursor: move;
+    padding: 8px;
+    width: 128px;
+    text-align: center;
+    margin: 10px;
+    outline:none;
+}
+
+
+.sidebar-item.katavorio-clone-drag {
+    margin:0;
+    border:1px solid white;
+}
+
+.sidebar-item:hover, .sidebar-item.katavorio-clone-drag {
+    background-color: #5184a0;
+    color:white;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+/* --- jsPlumb setup ---------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.jtk-connector {
+    z-index:9;
+}
+
+.jtk-connector:hover, .jtk-connector.jtk-hover {
+    z-index:10;
+}
+
+.jtk-endpoint {
+    z-index:12;
+    opacity:0.8;
+    cursor:pointer;
+}
+
+.jtk-overlay {
+    background-color: white;
+    color: #434343;
+    font-weight: 400;
+    padding: 4px;
+    z-index:10;
+
+}
+
+.jtk-overlay.jtk-hover {
+    color: #434343;
+}
+
+path {
+    cursor:pointer;
+}
+
+
+
+.edit:hover {
+    color: #ff8000;
+}
+
+.selected-mode {
+    color:#E4F013;
+}
+
+.connect {
+    width:10px;
+    height:10px;
+    background-color:#f76258;
+    position:absolute;
+    bottom: 13px;
+    right: 5px;
+}
+
+/* header styles */
+
+.demo-links {
+    position: fixed;
+    right: 0;
+    top: 57px;
+    font-size: 11px;
+    background-color: white;
+    opacity: 0.8;
+    padding-right: 10px;
+    padding-left: 5px;
+    text-transform: uppercase;
+    z-index:100001;
+}
+
+.demo-links div {
+    display:inline;
+    margin-right:7px;
+    margin-left:7px;
+}
+
+.demo-links i {
+    padding:4px;
+}
+/*
+.jtk-node {
+    border:1px solid;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    z-index: 11;
+    overflow: hidden;
+    min-width:80px;
+    min-height:30px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.jtk-node .name {
+    cursor: move;
+    font-size: 13px;
+    text-align: center;
+}
+
+.jtk-node .name span {
+    cursor:pointer;
+}
+
+*/
+
+
+
+/* icons */
+
+.jtk-node .add, .jtk-node .delete, .jtk-node .node-edit {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 10px;
+    padding-bottom: 2px;
+}
+
+.jtk-node .add:hover, .jtk-node .delete:hover, .jtk-node .node-edit, .jtk-node .add.constant, .jtk-node .delete.constant {
+    color:white;
+}
+
+.jtk-node .add {
+    right:3px;
+}
+
+.jtk-node .add:after {
+    content:"+";
+}
+
+.jtk-node .add:hover, .jtk-node .add.constant {
+    background-color: #4ea758;
+}
+
+.jtk-node .delete {
+    left:3px;
+}
+
+.jtk-node .delete:after {
+    content:"x";
+}
+
+.jtk-node .delete:hover, .jtk-node .delete.constant {
+    background-color:#d83f3f;
+}
+
+.jtk-node .node-edit:after {
+    content:"✎";
+}
+
+.fa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+}
+
+.fa-plus:after {
+    content:"+";
+    margin-bottom: 0.2rem;
+}
+
+.fa-home:after {
+    content:"⌂";
+    margin-bottom: 0.4rem;
+}
+
+.fa-pencil:after {
+    content:"✎";
+}
+
+.fa-arrows:after {
+    content:"✥";
+}
+
+.fa-undo:after {
+    content:"↺";
+}
+
+.fa-repeat:after {
+    content:"↻";
+}
+
+.fa-times:after {
+    content:"x";
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* -------------------------  styles for connector paths when editing ---------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+/* jtk-connection-edit is set on an edge that is being edited. */
+.jtk-connection-edit path {
+    stroke:gold;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* --------------------    Styles for Orthogonal editor ------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+.jtk-orthogonal-handle {
+    width:20px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    font-size:13px;
+    border-radius:50%;
+    background-color:#f7f6f6;
+    cursor:move;
+    z-index:10;
+    color:black;
+    box-shadow: 0 0 10px;
+}
+
+.jtk-orthogonal-segment-drag {
+    cursor:move;
+    cursor:grab;
+}
+
+.jtk-orthogonal-segment-drag-ns:before {
+    content:"\2195";
+}
+
+.jtk-orthogonal-segment-drag-ew:before {
+    content:"\2194";
+}
+
+.jtk-orthogonal-segment-drag:hover {
+    background-color: white;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* --------------------    Styles for Bezier/StateMachine editor --------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+/*
+    Identifies a handle used to drag a control point.
+*/
+.jtk-bezier-handle {
+    width:15px;
+    height:15px;
+    line-height:15px;
+    border-radius:50%;
+    background-color:darkcyan;
+    cursor:move;
+    z-index:10;
+    font-size:8px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.jtk-bezier-handle-control-point { }
+
+/*
+    The drag handle corresponding to the first control point. For StateMachine connectors only this handle is shown.
+ */
+.jtk-bezier-handle-control-point-1:before {
+    content:"1";
+}
+
+/*
+    The drag handle corresponding to the second control point. For StateMachine connectors only this handle is shown.
+ */
+.jtk-bezier-handle-control-point-2:before {
+    content:"2";
+}
+
+.jtk-bezier-handle-control-point-3:before {
+    content:"3";
+}
+
+.jtk-bezier-handle-control-point-4:before {
+    content:"4";
+}
+
+.jtk-bezier-handle-secondary {
+    cursor:default;
+    background-color:lightgreen;
+}
+
+.jtk-bezier-handle-secondary-source {
+    background-color: lavenderblush;
+}
+
+.jtk-bezier-guideline {
+    position:absolute;
+    stroke-dasharray: 2;
+}
+
+.jtk-bezier-guideline path {
+    stroke:darkcyan;
+    stroke-linewidth:3;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* -----------------------------   Styles for anchor placeholders -------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+/*
+    Added to the element placed at the location of an anchor for a connection that is being edited. This applies
+    to both dynamic and continuous anchors. Fixed anchors cannot be relocated.
+*/
+.jtk-anchor-placeholder {
+    width: 20px;
+    height: 20px;
+    cursor: move;
+    cursor:grab;
+    border-radius: 50%;
+    background-color:#f7f6f6;
+    box-shadow: 0 0 4px;
+}
+
+/*
+    Added to the elements drawn to show where a certain anchor may be relocated to (for dynamic anchors)
+*/
+.jtk-anchor-candidate {
+    background-color:mediumseagreen;
+    width: 20px;
+    height: 20px;
+}
+
+/*
+    `jtk-anchor-face` is an attribute written onto an element (source or target) when the connection that is being edited
+    has `Continuous` anchors, and the user is dragging an anchor point to relocate it. The value of the attribute is the
+    candidate face on the element.
+ */
+[jtk-anchor-face='left'] {
+    border-left:4px solid gold !important;
+}
+
+[jtk-anchor-face='top'] {
+    border-top:4px solid gold !important;
+}
+
+[jtk-anchor-face='right'] {
+    border-right:4px solid gold !important;
+}
+
+[jtk-anchor-face='bottom'] {
+    border-bottom:4px solid gold !important;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------- edge delete button ---------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+.jtk-edge-delete {
+    width:15px;
+    height:15px;
+    line-height: 15px;
+    text-align: center;
+    background-color:orangered;
+    color:white;
+    border-radius:50%;
+    font-size:8px;
+    cursor:pointer;
+    font-family:sans-serif;
+}
+
+.jtk-edge-delete:before {
+    content:"X";
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* --- DIALOGS --------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------- */
+
+/*
+    This is the element that acts as the dialog underlay - the modal "mask". Note the high z-index default
+    set here (and note also the overlay style below has a z-index with a value higher by one).
+*/
+.jtk-dialog-underlay {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 100000;
+    opacity: 0.8;
+    background-color: #CCC;
+    display: none;
+}
+
+/*
+    This is the element that acts as the parent for dialog content.
+*/
+.jtk-dialog-overlay {
+    position: fixed;
+    z-index: 100001;
+    display: none;
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    padding: 9px;
+    box-shadow: 0 0 5px grey;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.jtk-dialog-overlay-x {
+    max-height:0;
+    transition: max-height 0.5s ease-in;
+    -moz-transition: max-height 0.5s ease-in;
+    -ms-transition: max-height 0.5s ease-in;
+    -o-transition: max-height 0.5s ease-in;
+    -webkit-transition: max-height 0.5s ease-in;
+}
+
+.jtk-dialog-overlay-y {
+    max-width:0;
+    transition: max-width 0.5s ease-in;
+    -moz-transition: max-width 0.5s ease-in;
+    -ms-transition: max-width 0.5s ease-in;
+    -o-transition: max-width 0.5s ease-in;
+    -webkit-transition: max-width 0.5s ease-in;
+}
+
+.jtk-dialog-overlay-top {
+    top:20px;
+}
+
+.jtk-dialog-overlay-bottom {
+    bottom:20px;
+}
+
+.jtk-dialog-overlay-left {
+    left:20px;
+}
+
+.jtk-dialog-overlay-right {
+    right:20px;
+}
+
+.jtk-dialog-overlay-x.jtk-dialog-overlay-visible {
+    max-height:1000px;
+}
+
+.jtk-dialog-overlay-y.jtk-dialog-overlay-visible {
+    max-width:1000px;
+}
+
+/*
+    The element containing buttons in a dialog.
+*/
+.jtk-dialog-buttons {
+    text-align: right;
+    margin-top: 7px;
+}
+
+/*
+    An individual button in a dialog.
+*/
+.jtk-dialog-button {
+    cursor: pointer;
+    margin-right: 5px;
+    min-width: 56px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 4px;
+    outline: none;
+}
+
+/*
+    Hover style for an individual button in a dialog.
+*/
+.jtk-dialog-button:hover {
+    color: white;
+    background-color: #5184a0;
+    border-color:white;
+}
+
+/*
+    The titlebar of a dialog.
+*/
+.jtk-dialog-title {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.jtk-dialog-content {
+    font-size:12px;
+    text-align:left;
+    min-width:250px;
+    margin: 0 14px;
+}
+
+.jtk-dialog-content ul {
+    width:100%;
+    padding-left:0;
+}
+
+.jtk-dialog-content label {
+    cursor: pointer;
+    font-weight: inherit;
+}
+
+.jtk-dialog-overlay input, .jtk-dialog-overlay textarea {
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    color: #333;
+    font-size: 14px;
+    font-style: normal;
+    outline: none;
+    padding: 6px 4px;
+    margin-right: 6px;
+}
+
+.jtk-dialog-overlay input:focus, .jtk-dialog-overlay textarea:focus {
+    background-color: #f1f5fb;
+    border: 1px solid #5184a0;
+    color: #333;
+    font-size: 14px;
+    font-style: normal;
+    outline: none;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* --------------------    Styles for Orthogonal editor ------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+.jtk-orthogonal-handle {
+    width:20px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    font-size:13px;
+    border-radius:50%;
+    background-color:#f7f6f6;
+    cursor:move;
+    z-index:10;
+    color:black;
+    box-shadow: 0 0 10px;
+}
+
+.jtk-orthogonal-segment-drag {
+    cursor:move;
+    cursor:grab;
+}
+
+.jtk-orthogonal-segment-drag-ns:before {
+    content:"\2195";
+}
+
+.jtk-orthogonal-segment-drag-ew:before {
+    content:"\2194";
+}
+
+.jtk-orthogonal-segment-drag:hover {
+    background-color: white;
+}
+
+.jtk-demo-main {
+    display: flex;
+    height: 100vh;
+}
+
+.jtk-demo-canvas {
+    background-color: white;
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden !important;
+}
+
+.jtk-demo-rhs {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #f9f9f9;
+    flex: 0 0 250px;
+    padding: 20px 5px 0 5px;
+}
+
+.node-palette {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-item {
+    background-color: #CCC;
+    border-radius: 11px;
+    color: #585858;
+    cursor: move;
+    padding: 8px;
+    width: 128px;
+    text-align: center;
+    margin: 10px;
+    outline: none;
+}
+
+.miniview {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 100;
+}
+
+.jtk-demo-main .description {
+    font-size: 13px;
+    padding: 13px;
+}
+
+.jtk-demo-main .description ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.jtk-demo-main .description li {
+    list-style-type: disc !important;
+    margin: 3px 0;
+}
+
+/* ------------------------ dialogs ----------------------------*/
+
+
+/* ------------------------ dialogs ----------------------------*/
+
+/* ----------------------- drag/drop interactions -------------- */
+.drop-hover {
+    background-color: #FCCCCC !important;
+}
+
+/* ----------------------- node styles ------------------------- */
+
+.flowchart-object {
+    z-index: 10;
+    border: none;
+    overflow: visible;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:transparent;
+}
+
+.jtk-node svg {
+    position: absolute;
+    stroke: #CCC;
+    stroke-width: 2px;
+    fill: white;
+    left: 0;
+    top: 0;
+}
+
+.flowchart-object span {
+    color: black;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    z-index:10;
+}
+
+.flowchart-object .node-action {
+    display: none;
+    position: absolute;
+    top: -14px;
+    cursor: pointer;
+    z-index: 10000;
+    left: auto;
+    color:white;
+    transition:transform 0.1s;
+    font-family: sans-serif;
+    text-align: center;
+    opacity:0.9;
+
+}
+
+.flowchart-object .node-action:hover {
+    transform: scale(1.3, 1.3);
+}
+
+
+.flowchart-object .node-edit {
+    right: 25px;
+    background-color: #4ea758;
+
+}
+
+.flowchart-object .node-delete {
+    right: 4px;
+    background-color: #d83f3f;
+}
+
+.flowchart-object.jtk-surface-selected-element .node-action {
+    display: block;
+    width: 15px;
+    height: 15px;
+    top:-20px;
+    cursor:pointer;
+    line-height: 15px;
+
+}
+
+.flowchart-object .connect {
+    position:absolute;
+    left:50%;
+    margin-left:-7.5px;
+    background-color:rgb(132, 172, 179);
+    transition:transform 0.1s;
+}
+
+.flowchart-object .connect:hover {
+    transform: scale(1.2, 1.2);
+    opacity:1;
+}
+
+.flowchart-action .connect {
+    bottom:18px;
+}
+
+.flowchart-question .connect {
+    bottom:28px;
+}
+
+.flowchart-start .connect {
+    right: 17px;
+    left: auto;
+    top: 50%;
+    margin-top: -7.5px;
+}
+
+.connect {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+}
+
+.connect:after {
+    content:"→";
+}
+
+.connection-drop svg {
+    fill:#CCC;
+}
+
+.connection-drop text {
+    fill:black;
+}
+
+.jtk-overlay {
+    z-index:11;
+}
+
+
+/* --------------------- edge styles ----------------------------------- */
+
+/*
+    style for the delete button. this is in fact supplied in the editable connectors css as a default but on our own site
+    the cascade conspires to elide the background color and foreground color. Without wanting to mark the style as `!important` in our defaults stylesheet,
+    we instead supply them again here.
+ */
+.jtk-edge-delete {
+    background-color: orangered;
+    color:white;
+}
+
+/* styles for drag + drop */
+
+.jtk-surface.jtk-drag-drop-active {
+    outline:6px dotted #4ea758 !important;
+}
+
+.jtk-surface.jtk-drag-drop-hover {
+    outline: 6px solid #f7a45d !important;
+}
+
+svg.jtk-drag-drop-hover, svg.jtk-drag-drop-active {
+    outline:none !important;
+}
+
+svg.jtk-drag-drop-active path {
+    stroke:#4ea758;
+    stroke-width:3px;
+    stroke-dasharray:2 0 2 5;
+}
+
+svg.jtk-drag-drop-hover path {
+    stroke:#f7a45d;
+    stroke-width:4px;
+    stroke-dasharray:0;
+}
+
+.fa-times:after {
+    content:"✖"
+}
