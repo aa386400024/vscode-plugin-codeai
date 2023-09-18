@@ -1,33 +1,36 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-// sqlt图谱展示页面
+// sql图谱展示页面
 
+// 导入VS Code的API模块，用于与VS Code编辑器进行交互
 import * as vscode from "vscode";
 
-
+// 定义SQL图谱的展示类
 export class SqlProvider implements vscode.WebviewViewProvider {
-    private webView?: vscode.WebviewView;
+    private webView?: vscode.WebviewView;  // 定义一个可能的Webview视图
+    public promptText?: string;  // 定义一个可能的提示文本
 
-    public promptText?: string;
-
+    // 构造函数，接收一个VS Code的扩展上下文
     constructor(private context: vscode.ExtensionContext) { }
 
-    // 解析前端页面
+    // 解析前端页面的函数
     resolveWebviewView(
         webviewView: vscode.WebviewView,
         _context: vscode.WebviewViewResolveContext<unknown>,
         _token: vscode.CancellationToken
     ): void | Thenable<void> {
-        this.webView = webviewView;
+        this.webView = webviewView;  // 设置当前的Webview视图
+
+        // 设置Webview的选项
         webviewView.webview.options = {
             enableScripts: true,
             localResourceRoots: [this.context.extensionUri],
         };
 
+        // 设置Webview的HTML内容
         webviewView.webview.html = this.getWebviewContent(webviewView.webview);
-
     }
 
-    // 发送信息到前端页面函数
+    // 发送消息到前端页面的函数
     public async sendMessageToWebView(message: any) {
         if (this.webView) {
             this.webView?.show?.(true);
@@ -38,9 +41,8 @@ export class SqlProvider implements vscode.WebviewViewProvider {
         this.webView?.webview.postMessage(message);
     }
 
-    // 前端页面
+    // 获取前端页面内容的函数
     getWebviewContent(webview: vscode.Webview) {
-
         // 获取js模块地址
         const scriptUri = webview.asWebviewUri(
             vscode.Uri.joinPath(this.context.extensionUri, "media","scripts", "uml.js")
@@ -58,7 +60,7 @@ export class SqlProvider implements vscode.WebviewViewProvider {
             vscode.Uri.joinPath(this.context.extensionUri, "media", "scripts", "jsplumb", "js", "table.js")
         );
 
-
+        // 返回HTML内容
         return `<!DOCTYPE html>
     <html lang="en">
     <head>

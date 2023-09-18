@@ -1,137 +1,41 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 // 调用sql血缘接口（待修改）
+
+// 导入VS Code的API模块，用于与VS Code编辑器进行交互
 import * as vscode from "vscode";
+
+// 导入工具函数，用于显示和隐藏状态消息
 import { hideStatusMessage, showTemporaryStatusMessage } from "../utils";
+
+// 导入Web视图提供者，用于与Web视图进行交互
 import { SqlProvider } from "../webviews/sqlProvider";
+
+// 导入axios库，用于发送HTTP请求
 import axios from "axios";
+
+// 导入qs库，用于处理查询字符串
 import * as qs from "qs";
 
-// type ApiResponse = {
-//     code: number,
-//     data: Data,
-//     sqltext: string
-// };
+// 下面的类型定义部分被注释掉了，可能是因为当前版本不需要这些类型定义，或者它们将在未来的版本中使用
 
-// type coordinate = {
-//     'x': number,
-//     'y': number,
-//     'hashcode': string
-// };
-
-// type cocolumn = {
-//     'id': string,
-//     'name': string,
-//     'coordinates': Array<coordinate>
-// };
-
-// type dbobj = {
-//     'id': string,
-//     'name': string,
-//     'type': string,
-//     'columns': Array<cocolumn>,
-//     'coordinates': Array<coordinate>
-// };
-
-// type source = {
-//     'id': string,
-//     'column': string,
-//     'parentID': string,
-//     'coordinates': Array<coordinate>
-// };
-
-// type target = {
-//     'id': string,
-//     'column': string,
-//     'parentId': string,
-//     'parentName': string,
-//     'coordinates': Array<coordinate>
-// };
-
-// type relation = {
-//     'id': string,
-//     'type': string,
-//     'effectType': string,
-//     'target': target,
-//     'sources': Array<source>
-// };
-
-// type sqlflow = {
-//     'dbvendor': string, 
-//     'dbobjs': Array<dbobj>, 
-//     'relations': Array<relation>
-// };
-
-// type Lable = {
-//     'content': string,
-//     'fontFamily': string,
-//     'fontSize': string,
-//     'height': number,
-//     'width': number,
-//     'x': number,
-//     'y': number,
-// };
-
-// type column = {
-//     'height': string,
-//     'id': string,
-//     'lable': Lable,
-//     'width': number,
-//     'x': number,
-//     'y': number,
-// };
-
-// type Table = {
-//     'columns': Array<column>,
-//     'height': number,
-//     'id': string,
-//     'label': Lable,
-//     'width': number,
-//     'x': number,
-//     'y': number,
-// };
-
-// type Edge = {
-//     'id': string,
-//     'sourceId': string,
-//     'targetId': string,
-// };
-
-// type Element = {
-//     'tables': Array<Table>,
-//     'edges': Array<Edge>
-// };
-
-// type Graph = {
-//     'elements': Element,
-//     'tooltip': string,
-//     'relationIdMap': string,
-//     'listIdMap': string
-// };
-
-// type Data = {
-//     'mode': string,
-//     'summary': string,
-//     'sqlflow': sqlflow,
-//     'graph': Graph
-// };
-
-
-
+// 定义与SQL进行交互的函数
 export const chatToSQL = (
     webViewProvider: SqlProvider | undefined
 ) => {
     return async () => {
-
+        // 检查Web视图提供者是否可用
         if (!webViewProvider) {
             vscode.window.showErrorMessage("Webview is not available.");
             return;
         }
+
+        // 获取当前活动的文本编辑器
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
             return;
         }
 
-        // 从workspace设置中获得sqlType，并设置dbvendor变量
+        // 从workspace设置中获取sqlType，并设置dbvendor变量
         let dbvendor: string;
         let dbtype: string;
         dbtype = vscode.workspace.getConfiguration('codeai').get("sqlType") || "Oracle";
@@ -158,7 +62,7 @@ export const chatToSQL = (
             }
         }
 
-        // 或者ide选中代码
+        // 获取IDE中选中的代码
         const selectedText = editor.document.getText(editor.selection);
 
         // 编码并生成调用api参数
@@ -171,6 +75,7 @@ export const chatToSQL = (
             'ignoreRecordSet': 'false'
         });
 
+        // 定义API的URL
         const url: string = "http://dms.citicsinfo.com/provenance/sjzl/gspLive_backend/sqlflow/generation/sqlflow/graph.vot";
         const config = {
             method: 'post',
@@ -182,15 +87,17 @@ export const chatToSQL = (
             data: data
         };
 
-        showTemporaryStatusMessage("等待CodeAI...", undefined, true); // 调用等待图标控件
+        // 调用等待图标控件
+        showTemporaryStatusMessage("等待CodeAI...", undefined, true);
         
         try {
             process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
             
-            const response = await axios(config); // 调用api
+            // 调用API
+            const response = await axios(config);
             let json = await response.data;
             
-            // 成功则将选择文本与数据库类型发送至sqlProvider页面，再次进行调用并展示结果（二次调用待改进）
+            // 成功则将选中文本与数据库类型发送到sqlProvider页面，再次进行调用并显示结果（二次调用待改进）
             if (json.code === 200) {
                 await webViewProvider.sendMessageToWebView({
                     type: "addGraph",
@@ -201,11 +108,11 @@ export const chatToSQL = (
                 showTemporaryStatusMessage("Failed to call chatgpt!", 5000);
             }
         } catch (error) {
+            // 打印错误信息
             console.error(error);
         } finally {
-            hideStatusMessage(); // 关闭等待图标控件
+            // 关闭等待图标控件
+            hideStatusMessage();
         }
-
-
     };
 };

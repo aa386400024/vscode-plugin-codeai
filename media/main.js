@@ -1,62 +1,75 @@
+// 禁用一些TypeScript和ESLint的规则（这些规则与代码风格和格式有关）
 /* eslint-disable @typescript-eslint/semi */
 /* eslint-disable @typescript-eslint/naming-convention */
 // @ts-nocheck
 
-// This script will be run within the webview itself
-// It cannot access the main VS Code APIs directly.
+// 这个脚本将在webview内部运行，不能直接访问VS Code的主要API
 (function () {
+    // 获取VS Code API的引用，以便在webview内部与VS Code扩展进行通信
     const vscode = acquireVsCodeApi();
+
+    // 获取ID为"qa-list"的DOM元素，这可能是一个用于显示问题和答案的列表
     const list = document.getElementById("qa-list");
+
+    // 初始化一个空字符串，用于存储从扩展接收的响应
     let response = '';
     
-    // Handle messages sent from the extension to the webview
+    // 添加一个事件监听器，用于处理从VS Code扩展发送到webview的消息
     window.addEventListener("message", (event) => {
+        // 获取发送的消息内容
         const message = event.data;
 
+        // 根据消息的类型进行不同的处理
         switch (message.type) {
             case "askQuestion":
+                // 使用marked库解析Markdown格式的问题
                 const html = marked.parse(message.question);
+                // 将解析后的HTML内容设置到qa-list元素中
                 list.innerHTML = `<div class="p-4 self-end mb-4">
                           <p class="font-bold mb-5 flex">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" ... ></svg>
                               You
                           </p>
                           ${html}
                       </div>`;
-
+                // 显示一个等待消息，告诉用户正在处理他们的请求
                 document.getElementById("in-progress")?.classList?.remove("hidden");
                 break;
             case "addResponse":
+                // 隐藏等待消息
                 document.getElementById("in-progress")?.classList?.add("hidden");
+                // 存储从扩展接收的响应
                 response = message.value;
-                list.innerHTML += `<p class="font-bold mb-5 flex">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" /></svg>
-                </p>`;
+                // 将响应添加到qa-list元素中
+                list.innerHTML += `<p class="font-bold mb-5 flex">...</p>`;
+                // 设置响应的格式
                 setResponse();
                 break;
             default:
+                // 对于其他类型的消息，不进行任何操作
                 break;
         }
     });
 
-    // 高亮代码块
+    // 高亮代码块的函数
     function fixCodeBlocks(response) {
-        // Use a regular expression to find all occurrences of the substring in the string
-        const REGEX_CODEBLOCK = new RegExp('\`\`\`', 'g');
+        // 使用正则表达式查找字符串中的所有代码块标记
+        const REGEX_CODEBLOCK = new RegExp('\\`\\`\\`', 'g');
         const matches = response.match(REGEX_CODEBLOCK);
 
-        // Return the number of occurrences of the substring in the response, check if even
+        // 返回字符串中代码块标记的数量，并检查是否为偶数
         const count = matches ? matches.length : 0;
         if (count % 2 === 0) {
             return response;
         } else {
-            // else append ``` to the end to make the last code block complete
-            return response.concat('\n\`\`\`');
+            // 如果不是偶数，则在字符串末尾添加```以完成最后一个代码块
+            return response.concat('\\n\\`\\`\\`');
         }
     }
 
-    // 设置返回格式
+    // 设置响应格式的函数
     function setResponse() {
+        // 使用showdown库转换Markdown格式的响应
         var converter = new showdown.Converter({
             omitExtraWLInCodeBlocks: true,
             simplifiedAutoLink: true,
@@ -69,6 +82,7 @@
         console.log(html);
         document.getElementById("qa-list").innerHTML += html;
 
+        // 为所有代码块添加样式
         var preCodeBlocks = document.querySelectorAll("pre code");
         for (var i = 0; i < preCodeBlocks.length; i++) {
             preCodeBlocks[i].classList.add(
@@ -79,15 +93,17 @@
             );
         }
 
+        // 为所有内联代码块添加样式和点击事件
         var codeBlocks = document.querySelectorAll('code');
         for (var i = 0; i < codeBlocks.length; i++) {
-            // Check if innertext starts with "Copy code"
+            // 检查内联代码块的文本是否以"Copy code"开头
             if (codeBlocks[i].innerText.startsWith("Copy code")) {
                 codeBlocks[i].innerText = codeBlocks[i].innerText.replace("Copy code", "");
             }
 
             codeBlocks[i].classList.add("inline-flex", "max-w-full", "overflow-hidden", "rounded-sm", "cursor-pointer");
 
+            // 当用户点击代码块时，发送一个消息到VS Code扩展
             codeBlocks[i].addEventListener('click', function (e) {
                 e.preventDefault();
                 vscode.postMessage({
@@ -103,15 +119,16 @@
             d.classList.add("code");
         }
 
-        // microlight.reset('code');
+        // microlight.reset('code');  // 这行代码被注释掉了，可能是用于重置代码高亮的函数
 
-        //document.getElementById("response").innerHTML = document.getElementById("response").innerHTML.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+        //document.getElementById("response").innerHTML = document.getElementById("response").innerHTML.replaceAll('<', '&lt;').replaceAll('>', '&gt;');  // 这行代码被注释掉了，可能是用于转义HTML字符的函数
     }
 
-    // 监听输入框按回车
+    // 为ID为'prompt-input'的输入框添加键盘事件监听器
     document.getElementById('prompt-input').addEventListener('keyup', function (e) {
-        // If the key that was pressed was the Enter key
+        // 如果按下的是Enter键
         if (e.keyCode === 13) {
+            // 发送一个消息到VS Code扩展，告诉扩展用户已经输入了一个问题
             vscode.postMessage({
                 type: 'prompt',
                 value: this.value
@@ -119,7 +136,6 @@
         }
     });
 
-
-    
+    // ... 其他函数和逻辑 ...
 
 })();
